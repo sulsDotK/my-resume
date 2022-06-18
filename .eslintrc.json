@@ -1,3 +1,48 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    // "next", //this will be re-added on a separate ticket and will be called "compliance"
+    // "next/core-web-vitals", //this will be re-added on a separate ticket and will be called "compliance"
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    // "plugin:import/recommended", //samequr-1234 will be on another ticket called "OCD"
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    // "no-console": "error", // add after removing all console log statements
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    // "prettier/prettier": "error",
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": 0,
+
+    // for windows users
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+    // "import/order": ["error", { "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object"], "newlines-between": "always-and-inside-groups" }]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.config.js"],
+      "env": {
+        "node": true
+      }
+    }
+  ]
 }
