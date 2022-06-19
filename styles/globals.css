@@ -16,17 +16,17 @@ body {
 }
 
 /* Next.js mounting point. Create a full width/height container for our page. */
-#__next {
+/* #__next {
   height: 100vh;
   display: grid;
-}
+} */
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
-/* Important to keep absolute as you don't want this to be rendered by the PDF. */
+/* Important to keep absolute as you don't want this to be rendered by the PDF.
 .downloadBtn {
   position: absolute;
   top: 0;
-}
+} */

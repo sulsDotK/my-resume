@@ -1,5 +1,5 @@
 import useSWR from 'swr'
-import { ResumeDataDto } from '../../pages/api/resume'
+import { ResumeDataDto } from '../../pages/api/dto'
 import { fetcher, ResponseDto } from '../base.service'
 
 export interface ResumeDto extends ResponseDto {

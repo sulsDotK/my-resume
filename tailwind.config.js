@@ -8,6 +8,9 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
+    fontFamily: {
+      sans: ['"Roboto Slab"']
+    },
     extend: {}
   },
   plugins: [require('@tailwindcss/typography')]
