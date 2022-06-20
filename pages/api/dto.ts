@@ -1,11 +1,17 @@
+import { ContactTypeEnum, TechSkillsEnum } from '../../types'
+
 export interface ResumeDataDto {
   name: string
+  photoUrl: string
   title: string
   about: string
-  contactInfo: ContactInfo[]
+  contactInfo: ContactInfoDto[]
+  skills: TechSkillsEnum[]
 }
 
-interface ContactInfo {
-  name: string
-  icon: React.Component
+interface ContactInfoDto {
+  name: ContactTypeEnum
+  value: string
 }
+
+interface WorkExperienceDto {}

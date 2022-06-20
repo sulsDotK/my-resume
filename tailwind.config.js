@@ -11,7 +11,12 @@ module.exports = {
     fontFamily: {
       sans: ['"Roboto Slab"']
     },
-    extend: {}
+    extend: {
+      colors: {
+        'pale-yellow-1': '#F1D1B5',
+        'pale-yellow-2': '#FFFFFF'
+      }
+    }
   },
   plugins: [require('@tailwindcss/typography')]
 }

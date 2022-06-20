@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Page from '../components/Page'
-import Resume from '../components/Resume'
+import Resume from '../components/Resume/Resume'
 import { RecoilRoot } from 'recoil'
 
 const Home: NextPage = () => {
