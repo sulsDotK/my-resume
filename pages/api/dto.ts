@@ -7,6 +7,9 @@ export interface ResumeDataDto {
   about: string
   contactInfo: ContactInfoDto[]
   skills: TechSkillsEnum[]
+  experience: WorkExperienceDto[]
+  education: EducationDto[]
+  interests: string[]
 }
 
 interface ContactInfoDto {
@@ -14,4 +17,19 @@ interface ContactInfoDto {
   value: string
 }
 
-interface WorkExperienceDto {}
+interface WorkExperienceDto {
+  position: string
+  company: string
+  location: string
+  from: string
+  to: string
+  accomplishments: string[]
+}
+
+interface EducationDto {
+  institution: string
+  degreeType: string
+  from: string
+  to: string
+  location: string
+}
