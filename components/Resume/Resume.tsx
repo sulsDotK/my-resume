@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { getFormattedDate } from 'utils/date'
 import { useResume } from '../../services/resume/resume.service'
 import Loader from '../misc/Loader/loader'
@@ -47,10 +48,16 @@ const Resume = () => {
           <div className="flex-row prose mt-4">
             <h3>Education</h3>
             <div>
-              {resumeData.education.map(education => {
+              {resumeData.education.map((education, index) => {
                 return (
                   <div className="flex flex-col" key={education.degreeType}>
-                    <h4 className="flex-row mt-0">{education.degreeType}</h4>
+                    <h4
+                      className={clsx([
+                        'flex-row',
+                        index > 0 ? 'mt-2' : 'mt-0'
+                      ])}>
+                      {education.degreeType}
+                    </h4>
                     <div className="flex-row text-base">
                       {education.institution}
                     </div>
@@ -61,7 +68,9 @@ const Resume = () => {
                           {getFormattedDate(education.to)}
                         </span>
                       </span>
-                      <span className="flex-col">{education.location}</span>
+                      <span className="flex-col text-sm">
+                        {education.location}
+                      </span>
                     </div>
                   </div>
                 )
