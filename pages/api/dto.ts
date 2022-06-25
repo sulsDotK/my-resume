@@ -1,7 +1,8 @@
 import { ContactTypeEnum, TechSkillsEnum } from '../../types'
 
 export interface ResumeDataDto {
-  name: string
+  firstName: string
+  lastName: string
   photoUrl: string
   title: string
   about: string

@@ -14,7 +14,7 @@ export enum TechSkillsEnum {
   NODE_JS = 'NodeJS',
   POSTGRE_SQL = 'PostgreSQL',
   REDIS = 'Redis',
-  TAILWIND = 'Tailwind'
+  TAILWIND_CSS = 'TailwindCSS'
 }
 
 export enum ContactTypeEnum {

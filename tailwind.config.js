@@ -14,7 +14,9 @@ module.exports = {
     extend: {
       colors: {
         'pale-yellow-1': '#F9F9F9',
-        'pale-yellow-2': '#FFFFFF'
+        'pale-yellow-2': '#FFFFFF',
+        'purple-main': '#5555E5',
+        'purple-sub': '#B2B2E3'
       },
       fontSize: {
         xs: '.5rem',

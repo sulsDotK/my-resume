@@ -1,4 +1,9 @@
-import { LocationMarkerIcon, MailIcon, PhoneIcon } from '@heroicons/react/solid'
+import {
+  ChevronDoubleRightIcon,
+  LocationMarkerIcon,
+  MailIcon,
+  PhoneIcon
+} from '@heroicons/react/solid'
 import TypeScriptIcon from '@icons/tailwind-css.svg'
 import ReactIcon from '@icons/react.svg'
 import AngularIcon from '@icons/angular.svg'
@@ -20,6 +25,7 @@ import ProblemSolvingIcon from '@icons/problem_solving.svg'
 import GamingIcon from '@icons/gaming.svg'
 import CricketIcon from '@icons/cricket.svg'
 import BadmintonIcon from '@icons/badminton.svg'
+import RightArrowIcon from '@icons/right-arrow.svg'
 import {
   ContactTypeEnum,
   InterestsEnum,
@@ -67,7 +73,7 @@ export const IconMapping: React.FC<IconMappingProps> = ({
       return <PostgreSqlIcon className={className} />
     case TechSkillsEnum.REDIS:
       return <RedisIcon className={className} />
-    case TechSkillsEnum.TAILWIND:
+    case TechSkillsEnum.TAILWIND_CSS:
       return <TailwindIcon className={className} />
   }
 
@@ -93,6 +99,12 @@ export const IconMapping: React.FC<IconMappingProps> = ({
       return <BadmintonIcon className={className} />
     case InterestsEnum.CRICKET:
       return <CricketIcon className={className} />
+  }
+
+  // others
+  switch (iconType) {
+    case 'right-arrow':
+      return <ChevronDoubleRightIcon className={className} />
     default:
       return <div></div>
   }

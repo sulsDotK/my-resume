@@ -61,7 +61,7 @@ body {
 
 @layer base {
   .sub-heading {
-    @apply text-xl font-semibold text-purple-600;
+    @apply text-xl font-semibold text-purple-main;
   }
 }
 

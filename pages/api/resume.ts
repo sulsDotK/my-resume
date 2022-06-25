@@ -4,7 +4,8 @@ import { ContactTypeEnum, InterestsEnum, TechSkillsEnum } from '../../types'
 import { ResumeDataDto } from './dto'
 
 const data: ResumeDataDto = {
-  name: 'Suleman Khalid',
+  firstName: 'Suleman',
+  lastName: 'Khalid',
   title: 'Full Stack Engineer',
   photoUrl: 'https://picsum.photos/150/',
   about:
@@ -40,12 +41,22 @@ const data: ResumeDataDto = {
         'Worked on worker service (Application layer) to find and remove data anomalies, apply defined constraints, and generate missing data using ElasticSearch, Razor Pages and InfluxDB.',
         'Created and designed worker service to maintain data consistency between postgres db (used by Web Application), and mySQL db (used by CAS GenisisWorld CRM System).'
       ]
+    },
+    {
+      position: 'Software Engineer',
+      company: 'Qureos',
+      location: 'Remote',
+      from: '2019-06-17',
+      to: '2022-09-01',
+      accomplishments: [
+        'Developed dashboard for machines and KPI’s monitoring, user management, machines management and data analysis using graphs, timeline and google map utilizing Angular'
+      ]
     }
   ],
   education: [
     {
       institution: 'NUCES (FAST-NU)',
-      degreeType: 'Bachelors in Computer Science',
+      degreeType: 'BS Computer Science',
       from: '2015-08-15',
       to: '2019-06-01',
       location: 'Lahore'
