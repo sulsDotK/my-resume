@@ -15,6 +15,56 @@ body {
   height: 100%;
 }
 
+@layer utilities {
+  .scroll-snap-none {
+    scroll-snap-type: none;
+  }
+  .scroll-snap-x {
+    scroll-snap-type: x;
+  }
+  .scroll-snap-y {
+    scroll-snap-type: y;
+  }
+
+  .strips {
+    width: 100vh;
+    height: 100vh;
+    /* background: linear-gradient(
+      -60deg,
+      red 10%,
+      green 10%,
+      green 50%,
+      purple: 50%,
+      purple 100%
+    ); */
+
+    background: linear-gradient(
+        -70deg,
+        rgba(184, 145, 227) 45%,
+        rgba(255, 255, 255, 0) 45%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      linear-gradient(
+        -55deg,
+        rgba(184, 145, 227, 0.75) 45% 47.5%,
+        rgba(255, 255, 255, 0.1) 47.5%,
+        rgba(255, 255, 255, 0.1) 100%
+      ),
+      linear-gradient(
+        -50deg,
+        rgba(184, 145, 227, 0.5) 47.5% 50%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0.1) 100%
+      );
+  }
+}
+
+@layer base {
+  .sub-heading {
+    @apply text-xl font-semibold text-purple-600;
+  }
+}
+
 /* Next.js mounting point. Create a full width/height container for our page. */
 /* #__next {
   height: 100vh;

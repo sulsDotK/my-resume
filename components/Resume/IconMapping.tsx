@@ -15,7 +15,16 @@ import NodeJsIcon from '@icons/node-js.svg'
 import PostgreSqlIcon from '@icons/postgresql.svg'
 import RedisIcon from '@icons/redis.svg'
 import TailwindIcon from '@icons/tailwind-css.svg'
-import { ContactTypeEnum, TechSkillsEnum } from './../../types/index'
+import ProgrammingIcon from '@icons/programming.svg'
+import ProblemSolvingIcon from '@icons/problem_solving.svg'
+import GamingIcon from '@icons/gaming.svg'
+import CricketIcon from '@icons/cricket.svg'
+import BadmintonIcon from '@icons/badminton.svg'
+import {
+  ContactTypeEnum,
+  InterestsEnum,
+  TechSkillsEnum
+} from './../../types/index'
 
 export interface IconMappingProps {
   iconType: string
@@ -70,6 +79,20 @@ export const IconMapping: React.FC<IconMappingProps> = ({
       return <MailIcon className={className} />
     case ContactTypeEnum.LOCATION:
       return <LocationMarkerIcon className={className} />
+  }
+
+  // interest
+  switch (iconType) {
+    case InterestsEnum.PROGRAMMING:
+      return <ProgrammingIcon className={className} />
+    case InterestsEnum.PROBLEM_SOLVING:
+      return <ProblemSolvingIcon className={className} />
+    case InterestsEnum.GAMING:
+      return <GamingIcon className={className} />
+    case InterestsEnum.BADMINTON:
+      return <BadmintonIcon className={className} />
+    case InterestsEnum.CRICKET:
+      return <CricketIcon className={className} />
     default:
       return <div></div>
   }

@@ -22,3 +22,11 @@ export enum ContactTypeEnum {
   EMAIL = 'email',
   LOCATION = 'location'
 }
+
+export enum InterestsEnum {
+  PROGRAMMING = 'Programming',
+  PROBLEM_SOLVING = 'Problem Solving',
+  GAMING = 'Gaming',
+  BADMINTON = 'Badminton',
+  CRICKET = 'Cricket'
+}

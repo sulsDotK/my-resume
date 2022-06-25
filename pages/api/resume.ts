@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { ContactTypeEnum, TechSkillsEnum } from '../../types'
+import { ContactTypeEnum, InterestsEnum, TechSkillsEnum } from '../../types'
 import { ResumeDataDto } from './dto'
 
 const data: ResumeDataDto = {
@@ -58,13 +58,7 @@ const data: ResumeDataDto = {
       location: 'Lahore'
     }
   ],
-  interests: [
-    'Programming',
-    'Problem Solving',
-    'Gaming',
-    'Badminton',
-    'Cricket'
-  ]
+  interests: Object.values(InterestsEnum)
 }
 
 export default function handler(
