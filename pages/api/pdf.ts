@@ -11,6 +11,7 @@ export default async function handler(
   await page.goto('http://localhost:3000')
   await page.emulateMediaType('screen')
 
+  // eslint-disable-next-line @typescript-eslint/no-misused-promises
   setTimeout(async () => {
     const pdfBuffer = await page.pdf({ format: 'A4' })
 
