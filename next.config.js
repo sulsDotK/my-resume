@@ -6,6 +6,7 @@ const nextConfig = {
   },
   webpack(config) {
     const fileLoaderRule = config.module.rules.find(
+      // @ts-ignore
       rule => rule.test && rule.test.test('.svg')
     )
     fileLoaderRule.exclude = /\.svg$/

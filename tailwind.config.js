@@ -44,6 +44,5 @@ module.exports = {
         black: 900
       }
     }
-  },
-  plugins: [require('@tailwindcss/typography')]
+  }
 }
