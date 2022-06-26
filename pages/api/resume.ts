@@ -57,9 +57,9 @@ const data: ResumeDataDto = {
         "Developed dashboard for machines and KPI's monitoring, with data analysis using graphs, timeline and google maps",
         "Developed worker service to calculate different machine's KPI's",
         'Created separate windows services to centralize logging and email sending processes',
-        'Migrated multiple services from REST API to Apache Kafka for inter-service communication',
+        'Migrated services from REST API to Apache Kafka for inter-service communication',
         'Worked on ETL service to find and remove data anomalies, apply defined constraints, and generate missing data points',
-        'Created and designed worker service to maintain data consistency between Postgres DB (used by Web Application), and mySQL DB (used by CAS GenisisWorld CRM System)',
+        'Designed worker service to maintain data consistency between Postgres DB (used by Web Application), and mySQL DB (used by CAS GenisisWorld CRM System)',
         'Communicated directly with clients for requirements specifications'
       ],
       skills: [
