@@ -2,19 +2,21 @@ export enum TechSkillsEnum {
   TYPESCRIPT = 'Typescript',
   REACT = 'React',
   ANGULAR = 'Angular',
-  C_SHARP = 'C#',
-  CSS = 'CSS',
-  DOCKER = 'Docker',
-  DOT_NET_CORE = '.NET Core',
-  FIREBASE = 'Firebase',
-  HTML = 'HTML',
-  MONGO_DB = 'MongoDB',
-  MY_SQL = 'MySQL',
+  NEST_JS = 'NestJS',
   NEXT_JS = 'NextJS',
   NODE_JS = 'NodeJS',
-  POSTGRE_SQL = 'PostgreSQL',
+  DOT_NET_CORE = '.NET Core',
+  HTML = 'HTML',
+  CSS = 'CSS',
+  TAILWIND_CSS = 'TailwindCSS',
+  C_SHARP = 'C#',
+  DOCKER = 'Docker',
+  FIREBASE = 'Firebase',
+  KAFKA = 'Kafka',
   REDIS = 'Redis',
-  TAILWIND_CSS = 'TailwindCSS'
+  MONGO_DB = 'MongoDB',
+  MY_SQL = 'MySQL',
+  POSTGRE_SQL = 'PostgreSQL'
 }
 
 export enum ContactTypeEnum {

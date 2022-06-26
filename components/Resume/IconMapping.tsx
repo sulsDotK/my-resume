@@ -25,7 +25,8 @@ import ProblemSolvingIcon from '@icons/problem_solving.svg'
 import GamingIcon from '@icons/gaming.svg'
 import CricketIcon from '@icons/cricket.svg'
 import BadmintonIcon from '@icons/badminton.svg'
-import RightArrowIcon from '@icons/right-arrow.svg'
+import NestJsIcon from '@icons/nest-js.svg'
+import KafkaIcon from '@icons/kafka.svg'
 import {
   ContactTypeEnum,
   InterestsEnum,
@@ -75,6 +76,10 @@ export const IconMapping: React.FC<IconMappingProps> = ({
       return <RedisIcon className={className} />
     case TechSkillsEnum.TAILWIND_CSS:
       return <TailwindIcon className={className} />
+    case TechSkillsEnum.NEST_JS:
+      return <NestJsIcon className={className} />
+    case TechSkillsEnum.KAFKA:
+      return <KafkaIcon className={className} />
   }
 
   // contact types

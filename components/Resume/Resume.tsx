@@ -19,12 +19,15 @@ const Resume = () => {
             <img src={resumeData.photoUrl} className="rounded-full" />
           </div>
           <div className="flex-row">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-1">
               <div className="sub-heading">Contact</div>
               <>
                 {resumeData.contactInfo.map(({ name, value }) => (
                   <div className="flex flex-row gap-2" key={name}>
-                    <IconMapping iconType={name} className="w-4 h-4 inline" />
+                    <IconMapping
+                      iconType={name}
+                      className="w-4 h-4 inline my-auto"
+                    />
                     <a className="text-tiny">{value}</a>
                   </div>
                 ))}
@@ -48,9 +51,9 @@ const Resume = () => {
             </div>
           </div>
           <div className="flex-row">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-4">
               <div className="sub-heading">Education</div>
-              {resumeData.education.map(education => {
+              {resumeData.education.map((education, index) => {
                 return (
                   <div key={education.degreeType}>
                     <div className={clsx(['font-medium text-tiny'])}>
@@ -70,6 +73,9 @@ const Resume = () => {
                         {education.location}
                       </span>
                     </div>
+                    {index < resumeData.education.length - 1 && (
+                      <hr className="mt-3 border border-1 border-gray-600 bg-gray-600" />
+                    )}
                   </div>
                 )
               })}
@@ -96,9 +102,8 @@ const Resume = () => {
         <div className="flex flex-col basis-2/3 p-4">
           <div className="flex-row">
             <span className="mb-1 text-5xl font-black ">
-              {resumeData.firstName}
+              {resumeData.firstName + '   '}
             </span>
-            <span>{'   '}</span>
             <span className="mb-1 text-5xl font-black text-purple-main">
               {resumeData.lastName}
             </span>
@@ -106,43 +111,48 @@ const Resume = () => {
           </div>
           <div className="flex-row mt-8">
             <div className="sub-heading">About</div>
-            <div className="text-sm">{resumeData.about}</div>
+            <div className="text-tiny">{resumeData.about}</div>
           </div>
           <div className="flex-row mt-8">
             <div className="flex flex-col gap-2">
               <div className="sub-heading">Work Experience</div>
               <div className="flex flex-col gap-4">
-                {resumeData.experience.map(experience => {
-                  return (
-                    <div className="flex flex-col" key={experience.company}>
-                      <div className="flex-row text-lg font-semibold mt-0">
-                        {experience.position}
-                      </div>
-                      <div className="flex-row text-tiny">
-                        {experience.company}
-                      </div>
-                      <div className="flex flex-row justify-between text-tiny italic font-extra-light">
-                        <span className="flex-col">
-                          {getFormattedDate(experience.from)}
-                        </span>
-                        <span className="flex-col">{experience.location}</span>
-                      </div>
-                      {experience.accomplishments.map(accomplishment => (
-                        <div>
-                          <IconMapping
-                            iconType="right-arrow"
-                            className="ml-[-4px] mr-1 w-4 h-4 my-auto inline"
-                          />
-                          <span
-                            className="text-sm"
-                            key={accomplishment.substring(0, 30)}>
-                            {accomplishment}
-                          </span>
+                {resumeData.experience
+                  .sort((one, two) => (one.from < two.from ? 1 : -1))
+                  .map(experience => {
+                    return (
+                      <div className="flex flex-col" key={experience.company}>
+                        <div className="flex-row text-lg font-semibold mt-0">
+                          {experience.position}
                         </div>
-                      ))}
-                    </div>
-                  )
-                })}
+                        <div className="flex-row text-tiny">
+                          {experience.company}
+                        </div>
+                        <div className="flex flex-row mb-2 justify-between text-sm italic font-extra-light">
+                          <span>
+                            {getFormattedDate(experience.from)} -{' '}
+                            {getFormattedDate(experience.to)}
+                          </span>
+                          <span>{experience.location}</span>
+                        </div>
+                        {experience.accomplishments.map(
+                          (accomplishment, index) => (
+                            <div>
+                              <IconMapping
+                                iconType="right-arrow"
+                                className="ml-[-4px] mr-1 w-4 h-4 my-auto inline"
+                              />
+                              <span
+                                className="text-tiny"
+                                key={accomplishment.substring(0, 30)}>
+                                {accomplishment}
+                              </span>
+                            </div>
+                          )
+                        )}
+                      </div>
+                    )
+                  })}
               </div>
             </div>
           </div>

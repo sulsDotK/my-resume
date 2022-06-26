@@ -4,12 +4,12 @@ import { ContactTypeEnum, InterestsEnum, TechSkillsEnum } from '../../types'
 import { ResumeDataDto } from './dto'
 
 const data: ResumeDataDto = {
-  firstName: 'Suleman',
+  firstName: 'Suleman  ',
   lastName: 'Khalid',
   title: 'Full Stack Engineer',
-  photoUrl: 'https://picsum.photos/150/',
+  photoUrl: '@private/profile-picture',
   about:
-    'As a full-stack web developer with 3+ years of experience, I have a broad skill set in everything web development: Leading backend teams, building complex business software from the ground up, high-traffic public websites, showcases, and proof-of-concepts. I specialize myself in Typescript, Nest.js, Node.js.',
+    'As a full-stack web developer with 3+ years of experience, I have a broad skill set in everything web development: Leading backend teams, building software from the ground up, high-traffic public websites, proof-of-concepts and catering to complex business requirements. I specialize myself in backend development, using Typescript, Nest.js, and Node.js.',
   contactInfo: [
     {
       name: ContactTypeEnum.PHONE,
@@ -33,23 +33,30 @@ const data: ResumeDataDto = {
       from: '2019-06-17',
       to: '2021-11-26',
       accomplishments: [
-        'Developed dashboard for machines and KPI’s monitoring, user management, machines management and data analysis using graphs, timeline and google map utilizing Angular',
-        "Developed worker service (KPI Calculation Service) to calculate different machine's KPI's using C#, Razor Pages, Google API, ElasticSearch, Redis and InfluxDB.",
-        'Communicated directly with clients for requirements specifications.',
-        'Created separate windows services to centralize logging (LoggingService), and send emails (EmailSenderService) from multiple microservices.',
-        'Migrated multiple services from using REST api to Apache Kafka for interservice communication.',
-        'Worked on worker service (Application layer) to find and remove data anomalies, apply defined constraints, and generate missing data using ElasticSearch, Razor Pages and InfluxDB.',
-        'Created and designed worker service to maintain data consistency between postgres db (used by Web Application), and mySQL db (used by CAS GenisisWorld CRM System).'
+        "Developed dashboard for machines and KPI's monitoring, user management, machines management and data analysis using graphs, timeline and google map utilizing Angular",
+        "Developed worker service (KPI Calculation Service) to calculate different machine's KPI's",
+        'Created separate windows services to centralize logging and email sending processes',
+        'Migrated multiple services from REST API to Apache Kafka for inter-service communication',
+        'Worked on ETL service to find and remove data anomalies, apply defined constraints, and generate missing data points',
+        'Created and designed worker service to maintain data consistency between postgres db (used by Web Application), and mySQL db (used by CAS GenisisWorld CRM System)',
+        'Communicated directly with clients for requirements specifications'
       ]
     },
     {
-      position: 'Software Engineer',
-      company: 'Qureos',
+      position: 'Full Stack Engineer',
+      company: 'Qureos (via Remotebase)',
       location: 'Remote',
-      from: '2019-06-17',
-      to: '2022-09-01',
+      from: '2021-12-01',
+      to: '',
       accomplishments: [
-        'Developed dashboard for machines and KPI’s monitoring, user management, machines management and data analysis using graphs, timeline and google map utilizing Angular'
+        'Identified and highlighted the impact of techinal debt to management',
+        'Resolved techinical debt issues, whilst managing new features',
+        'Documented best practices for front and backend development',
+        'Migrated application from Node.js to Nest.js for better architecture',
+        "Built secure CRUD api's with consistent behavior",
+        'Built chat features from the ground up using Firebase and React',
+        'Evaluate performance and coach new developers',
+        'Balancing business requirements and delievery deadlines'
       ]
     }
   ],
