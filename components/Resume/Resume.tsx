@@ -15,7 +15,7 @@ const Resume = () => {
   ) : (
     <div className="root h-full">
       <div className="flex h-full">
-        <div className="flex flex-col gap-6 basis-1/3 p-4 bg-gradient-to-r from-purple-sub">
+        <div className="flex flex-col gap-6 basis-1/3 p-4">
           <div className="flex flex-row justify-center ">
             <div className="w-48 h-48 relative">
               <Image
