@@ -1,7 +1,10 @@
-import { NextApiHandler } from 'next'
+import { NextApiRequest, NextApiResponse } from 'next'
 import puppeteer from 'puppeteer'
 
-export default async function handler(req, res) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
 
