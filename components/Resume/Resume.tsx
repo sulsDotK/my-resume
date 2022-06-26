@@ -101,10 +101,10 @@ const Resume = () => {
         </div>
         <div className="flex flex-col basis-2/3 p-4">
           <div className="flex-row">
-            <span className="mb-1 text-5xl font-black ">
+            <span className="mb-1 text-5xl font-bold">
               {resumeData.firstName + '   '}
             </span>
-            <span className="mb-1 text-5xl font-black text-purple-main">
+            <span className="mb-1 text-5xl font-bold text-purple-main">
               {resumeData.lastName}
             </span>
             <div className="mt-0 text-3xl">{resumeData.title}</div>
