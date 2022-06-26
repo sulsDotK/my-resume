@@ -28,7 +28,7 @@ const data: ResumeDataDto = {
   firstName: 'Suleman  ',
   lastName: 'Khalid',
   title: 'Full Stack Engineer',
-  photoUrl: 'private/profile-picture.jpeg',
+  photoUrl: '/private/profile-picture.jpeg',
   about:
     'As a web developer with 3+ years of experience, I have a broad skill set in everything web development: Leading backend teams, building software from the ground up, high-traffic public websites, proof-of-concepts and catering to complex business requirements. I specialize myself in backend development, using Typescript, Nest.js, and Node.js.',
   contactInfo: [

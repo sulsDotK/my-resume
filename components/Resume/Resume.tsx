@@ -3,6 +3,7 @@ import { getFormattedDate } from 'utils/date'
 import { useResume } from '../../services/resume/resume.service'
 import Loader from '../misc/Loader/loader'
 import { IconMapping } from './IconMapping'
+import Image from 'next/image'
 
 const Resume = () => {
   const { resumeData, isLoading, isError } = useResume()
@@ -16,7 +17,15 @@ const Resume = () => {
       <div className="flex h-full">
         <div className="flex flex-col gap-6 basis-1/3 p-4 bg-gradient-to-r from-purple-sub">
           <div className="flex flex-row justify-center ">
-            <img src={resumeData.photoUrl} className="rounded-full w-48" />
+            <div className="w-48 h-48 relative">
+              <Image
+                src={resumeData.photoUrl}
+                alt="Picture"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-full"
+              />
+            </div>
           </div>
           <div className="flex-row">
             <div className="flex flex-col gap-1">
@@ -136,16 +145,12 @@ const Resume = () => {
                           <span>{experience.location}</span>
                         </div>
                         {experience.accomplishments.map(accomplishment => (
-                          <div>
+                          <div key={accomplishment.substring(0, 30)}>
                             <IconMapping
                               iconType="right-arrow"
                               className="ml-[-4px] mr-1 w-4 h-4 my-auto inline"
                             />
-                            <span
-                              className="text-tiny"
-                              key={accomplishment.substring(0, 30)}>
-                              {accomplishment}
-                            </span>
+                            <span className="text-tiny">{accomplishment}</span>
                           </div>
                         ))}
                         <div className="flex flex-row mt-3 justify-start flex-wrap">

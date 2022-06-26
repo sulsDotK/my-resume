@@ -1,14 +1,5 @@
 {
-  "extends": [
-    // "next", //this will be re-added on a separate ticket and will be called "compliance"
-    // "next/core-web-vitals", //this will be re-added on a separate ticket and will be called "compliance"
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    // "plugin:import/recommended", //samequr-1234 will be on another ticket called "OCD"
-    "prettier"
-  ],
+  "extends": ["next", "prettier"],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
