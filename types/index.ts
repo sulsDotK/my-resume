@@ -16,7 +16,8 @@ export enum TechSkillsEnum {
   REDIS = 'Redis',
   MONGO_DB = 'MongoDB',
   MY_SQL = 'MySQL',
-  POSTGRE_SQL = 'PostgreSQL'
+  POSTGRE_SQL = 'PostgreSQL',
+  INFLUX_DB = 'InfluxDB'
 }
 
 export enum ContactTypeEnum {

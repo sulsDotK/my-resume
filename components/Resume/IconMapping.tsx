@@ -27,6 +27,7 @@ import CricketIcon from '@icons/cricket.svg'
 import BadmintonIcon from '@icons/badminton.svg'
 import NestJsIcon from '@icons/nest-js.svg'
 import KafkaIcon from '@icons/kafka.svg'
+import InfluxDbIcon from '@icons/influx-db.svg'
 import {
   ContactTypeEnum,
   InterestsEnum,
@@ -80,6 +81,8 @@ export const IconMapping: React.FC<IconMappingProps> = ({
       return <NestJsIcon className={className} />
     case TechSkillsEnum.KAFKA:
       return <KafkaIcon className={className} />
+    case TechSkillsEnum.INFLUX_DB:
+      return <InfluxDbIcon className={className} />
   }
 
   // contact types

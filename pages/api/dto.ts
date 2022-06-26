@@ -25,6 +25,7 @@ interface WorkExperienceDto {
   from: string
   to: string
   accomplishments: string[]
+  skills: string[]
 }
 
 interface EducationDto {

@@ -16,7 +16,7 @@ const Resume = () => {
       <div className="flex h-full">
         <div className="flex flex-col gap-6 basis-1/3 p-4 bg-gradient-to-r from-purple-sub">
           <div className="flex flex-row justify-center ">
-            <img src={resumeData.photoUrl} className="rounded-full" />
+            <img src={resumeData.photoUrl} className="rounded-full w-48" />
           </div>
           <div className="flex-row">
             <div className="flex flex-col gap-1">
@@ -74,7 +74,7 @@ const Resume = () => {
                       </span>
                     </div>
                     {index < resumeData.education.length - 1 && (
-                      <hr className="mt-3 border border-1 border-gray-600 bg-gray-600" />
+                      <div className="mt-3 h-[2px] bg-gradient-to-r from-white to-purple-sub" />
                     )}
                   </div>
                 )
@@ -107,19 +107,19 @@ const Resume = () => {
             <span className="mb-1 text-5xl font-black text-purple-main">
               {resumeData.lastName}
             </span>
-            <div className="mt-0 text-3xl font-medium">{resumeData.title}</div>
+            <div className="mt-0 text-3xl">{resumeData.title}</div>
           </div>
-          <div className="flex-row mt-8">
+          <div className="flex-row mt-6">
             <div className="sub-heading">About</div>
             <div className="text-tiny">{resumeData.about}</div>
           </div>
-          <div className="flex-row mt-8">
+          <div className="flex-row mt-6">
             <div className="flex flex-col gap-2">
               <div className="sub-heading">Work Experience</div>
               <div className="flex flex-col gap-4">
                 {resumeData.experience
                   .sort((one, two) => (one.from < two.from ? 1 : -1))
-                  .map(experience => {
+                  .map((experience, index) => {
                     return (
                       <div className="flex flex-col" key={experience.company}>
                         <div className="flex-row text-lg font-semibold mt-0">
@@ -135,20 +135,30 @@ const Resume = () => {
                           </span>
                           <span>{experience.location}</span>
                         </div>
-                        {experience.accomplishments.map(
-                          (accomplishment, index) => (
-                            <div>
-                              <IconMapping
-                                iconType="right-arrow"
-                                className="ml-[-4px] mr-1 w-4 h-4 my-auto inline"
-                              />
-                              <span
-                                className="text-tiny"
-                                key={accomplishment.substring(0, 30)}>
-                                {accomplishment}
-                              </span>
-                            </div>
-                          )
+                        {experience.accomplishments.map(accomplishment => (
+                          <div>
+                            <IconMapping
+                              iconType="right-arrow"
+                              className="ml-[-4px] mr-1 w-4 h-4 my-auto inline"
+                            />
+                            <span
+                              className="text-tiny"
+                              key={accomplishment.substring(0, 30)}>
+                              {accomplishment}
+                            </span>
+                          </div>
+                        ))}
+                        <div className="flex flex-row mt-3 justify-start flex-wrap">
+                          {experience.skills.map(skill => (
+                            <IconMapping
+                              key={skill}
+                              iconType={skill}
+                              className="w-5 h-5 my-auto mx-1 inline"
+                            />
+                          ))}
+                        </div>
+                        {index < resumeData.experience.length - 1 && (
+                          <hr className="mt-3 border border-1 border-gray-200 bg-gray-200" />
                         )}
                       </div>
                     )
