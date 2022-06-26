@@ -88,8 +88,8 @@ const data: ResumeDataDto = {
         'Documented best practices for front and backend development',
         'Migrated application from Node.js to Nest.js for better architecture',
         "Built secure CRUD api's with consistent behavior",
-        'Built chat features from the ground up using Firebase and React',
-        'Evaluate performance and coach new developers',
+        'Implemented chat features from the ground up using Firebase and React',
+        'Evaluated performance and lead new developers',
         'Balancing business requirements and delivery deadlines'
       ],
       skills: [
