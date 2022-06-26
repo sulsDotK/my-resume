@@ -16,6 +16,7 @@
     "moment": "^2.29.3",
     "next": "12.1.6",
     "postcss": "^8.4.14",
+    "puppeteer": "^15.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "recoil": "^0.7.3",

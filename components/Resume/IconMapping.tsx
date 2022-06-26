@@ -4,7 +4,7 @@ import {
   MailIcon,
   PhoneIcon
 } from '@heroicons/react/solid'
-import TypeScriptIcon from '@icons/tailwind-css.svg'
+import TypeScriptIcon from '@icons/typescript.svg'
 import ReactIcon from '@icons/react.svg'
 import AngularIcon from '@icons/angular.svg'
 import CSharpIcon from '@icons/c-sharp.svg'
