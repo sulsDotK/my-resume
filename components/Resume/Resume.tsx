@@ -128,7 +128,7 @@ const Resume = () => {
                         <div className="flex-row text-tiny">
                           {experience.company}
                         </div>
-                        <div className="flex flex-row mb-2 justify-between text-sm italic font-extra-light">
+                        <div className="flex flex-row mb-2 justify-between text-sm italic font-light">
                           <span>
                             {getFormattedDate(experience.from)} -{' '}
                             {getFormattedDate(experience.to)}
