@@ -1,7 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { ResumeDataDto } from 'types/dto'
 import { ContactTypeEnum, InterestsEnum, TechSkillsEnum } from '../../types'
-import { ResumeDataDto } from './dto'
+
 const {
   TYPESCRIPT,
   REACT,
@@ -125,9 +126,12 @@ const data: ResumeDataDto = {
   interests: Object.values(InterestsEnum)
 }
 
+// serverless function
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResumeDataDto>
 ) {
-  res.status(200).json(data)
+  res.status(200).json(getResumeData())
 }
+
+export const getResumeData = () => data

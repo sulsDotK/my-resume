@@ -1,4 +1,4 @@
-import { ContactTypeEnum, TechSkillsEnum } from '../../types'
+import { TechSkillsEnum, ContactTypeEnum } from 'types'
 
 export interface ResumeDataDto {
   firstName: string
