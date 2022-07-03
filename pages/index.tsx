@@ -1,18 +1,35 @@
-import type { NextPage } from 'next'
 import Page from '../components/Page'
 import Resume from '../components/Resume/Resume'
 import { RecoilRoot } from 'recoil'
+import { getResume } from 'services/resume/resume.service'
+import { SWRConfig } from 'swr'
 
-const Home: NextPage = () => {
+interface Props {
+  fallback: { [key: string]: any }
+}
+
+export default function Home({ fallback }: Props) {
   return (
     <>
       <RecoilRoot>
         <Page>
-          <Resume></Resume>
+          <SWRConfig value={{ fallback }}>
+            <Resume></Resume>
+          </SWRConfig>
         </Page>
       </RecoilRoot>
     </>
   )
 }
 
-export default Home
+export async function getStaticProps() {
+  // `getStaticProps` is executed on the server side.
+  const resumeData = await getResume()
+  return {
+    props: {
+      fallback: {
+        '/api/resume': resumeData
+      }
+    }
+  }
+}

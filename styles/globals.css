@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  -webkit-print-color-adjust: exact; /* This makes sure that the PDF is rendered exactly like our layout. */
-}
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-  background: #f1f5f9; /* Light gray background */
-  width: 100%;
-  height: 100%;
-}
-
 @layer utilities {
   .scroll-snap-none {
     scroll-snap-type: none;
@@ -57,12 +44,29 @@ body {
         rgba(255, 255, 255, 0.1) 100%
       );
   }
-}
 
-@layer base {
+  /* Have to add custom styles here as tailwind doesn't support component level custom css */
+
   .sub-heading {
     @apply text-xl font-semibold text-purple-main;
   }
+
+  .line-hr {
+    @apply border border-gray-400 bg-gray-400;
+  }
+}
+
+html {
+  -webkit-print-color-adjust: exact; /* This makes sure that the PDF is rendered exactly like our layout. */
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #f1f5f9; /* Light gray background */
+  width: 100%;
+  height: 100%;
 }
 
 /* Next.js mounting point. Create a full width/height container for our page. */

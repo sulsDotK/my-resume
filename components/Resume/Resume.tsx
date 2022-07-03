@@ -83,7 +83,7 @@ const Resume = () => {
                       </span>
                     </div>
                     {index < resumeData.education.length - 1 && (
-                      <div className="mt-3 h-[2px] bg-gradient-to-r from-white to-purple-sub" />
+                      <div className="mt-3 line-hr" />
                     )}
                   </div>
                 )
@@ -163,7 +163,7 @@ const Resume = () => {
                           ))}
                         </div>
                         {index < resumeData.experience.length - 1 && (
-                          <hr className="mt-3 border border-1 border-gray-200 bg-gray-200" />
+                          <hr className="mt-3 line-hr" />
                         )}
                       </div>
                     )

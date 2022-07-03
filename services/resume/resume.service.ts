@@ -15,3 +15,8 @@ export const useResume = () => {
     isError: error
   } as ResumeDto
 }
+
+export const getResume = async () => {
+  const data = await fetcher(`/api/resume`)
+  return data as ResumeDataDto
+}
