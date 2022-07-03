@@ -6,7 +6,7 @@ export interface ResponseDto {
 }
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: process.env.API_URL,
   timeout: 30000
 })
 
