@@ -17,23 +17,21 @@ const Resume = () => {
   ) : (
     <div className="root h-full">
       <div className="flex h-full">
-        <div className="flex flex-col gap-6 basis-1/4 p-4">
-          <div className="flex-row mt-[140px]">
-            <div className="flex flex-col gap-2">
-              <div className="sub-heading">Skills</div>
-              <div className="flex flex-wrap">
-                {resumeData.skills.map(skill => (
-                  <div className="flex basis-1/2 gap-2 mb-1" key={skill}>
-                    <IconMapping
-                      iconType={skill}
-                      className="w-4 h-4 my-auto inline"
-                    />
-                    <span className="text-tiny">{skill}</span>
-                  </div>
-                ))}
-              </div>
+        <div className="flex flex-col gap-6 basis-1/5 p-4">
+          <div className="flex flex-col gap-2 mt-[140px]">
+            <div className="sub-heading">Skills</div>
+            <div className="flex-col">
+              {resumeData.skills.map(skill => (
+                <div className="flex basis-1/2 gap-2 mb-1" key={skill}>
+                  <IconMapping
+                    iconType={skill}
+                    className="w-4 h-4 my-auto inline"
+                  />
+                  <span className="text-tiny">{skill}</span>
+                </div>
+              ))}
             </div>
-          </div>
+          </div>{' '}
           <div className="flex-row">
             <div className="flex flex-col gap-4">
               <div className="sub-heading">Education</div>
@@ -46,16 +44,14 @@ const Resume = () => {
                     <div className="flex-row text-sm">
                       {education.institution}
                     </div>
-                    <div className="flex flex-row justify-between italic">
-                      <span className="flex-col">
+                    <div className="flex flex-col justify-between italic">
+                      <span>
                         <span className="text-sm">
                           {getFormattedDate(education.from)} -{' '}
                           {getFormattedDate(education.to)}
                         </span>
                       </span>
-                      <span className="flex-col text-sm">
-                        {education.location}
-                      </span>
+                      <span className="text-sm">{education.location}</span>
                     </div>
                     {index < resumeData.education.length - 1 && (
                       <div className="mt-3 line-hr" />
@@ -83,7 +79,7 @@ const Resume = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col basis-3/4 p-4">
+        <div className="flex flex-col basis-4/5 p-4">
           <div className="flex-row">
             <span className="mb-1 text-5xl font-bold">
               {resumeData.firstName + '   '}
@@ -93,11 +89,11 @@ const Resume = () => {
             </span>
             <div className="mt-0 text-3xl">{resumeData.title}</div>
           </div>
-          <div className="flex-row mt-6">
+          <div className="flex-row mt-3">
             <div className="sub-heading">About</div>
             <div className="text-tiny">{resumeData.about}</div>
           </div>
-          <div className="flex-row mt-6">
+          <div className="flex-row mt-3">
             <div className="flex flex-col gap-2">
               <div className="sub-heading">Work Experience</div>
               <div className="flex flex-col gap-4">
@@ -134,7 +130,7 @@ const Resume = () => {
                             </span>
                           </div>
                         ))}
-                        <div className="flex flex-row mt-3 justify-start flex-wrap">
+                        {/* <div className="flex flex-row mt-3 justify-start flex-wrap">
                           {experience.skills.map(skill => (
                             <IconMapping
                               key={skill}
@@ -142,7 +138,7 @@ const Resume = () => {
                               className="w-5 h-5 my-auto mx-1 inline"
                             />
                           ))}
-                        </div>
+                        </div> */}
                         {index < resumeData.experience.length - 1 && (
                           <hr className="mt-3 line-hr" />
                         )}

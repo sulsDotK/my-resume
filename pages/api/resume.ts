@@ -56,11 +56,9 @@ const data: ResumeDataDto = {
       to: '2021-11-26',
       accomplishments: [
         "Developed dashboard for machines and KPI's monitoring, with data analysis using graphs, timeline and google maps",
-        "Developed worker service to calculate different machine's KPI's",
         'Created separate windows services to centralize logging and email sending processes',
         `Migrated services from REST API to Apache ${TechSkillsEnum.KAFKA} for inter-service communication`,
-        'Worked on ETL service to find and remove data anomalies, apply defined constraints, and generate missing data points',
-        `Designed worker service to maintain data consistency between ${TechSkillsEnum.POSTGRE_SQL} (used by Web Application), and ${TechSkillsEnum.MY_SQL} DB (used by CAS GenisisWorld CRM System)`
+        'Worked on ETL service to find and remove data anomalies, apply defined constraints, and generate missing data points'
       ],
       skills: [
         DOT_NET_CORE,
@@ -84,13 +82,11 @@ const data: ResumeDataDto = {
       to: '',
       accomplishments: [
         `Implemented subscriptions and purchases system, using ${TechSkillsEnum.STRIPE} API for payments infrastructure, leading to faster development and increased revenue`,
-        `Built secure CRUD api's, using ${TechSkillsEnum.NEST_JS} and ${TechSkillsEnum.MONGO_DB}`,
         `Implemented chat features from the ground up using ${TechSkillsEnum.FIREBASE} and ${TechSkillsEnum.REACT}, which eased communication and drove engagement`,
         'Identified and highlighted the impact of technical debt to management, leading to a long term road map to resolution',
         'Resolved performance bottleneck issues, improved app loading speed by 50%',
         'Documented and peer reviewed best practices for front and backend development, thus ensuring consistent coding standards',
-        `Migrated application from ${TechSkillsEnum.NODE_JS} to ${TechSkillsEnum.NEST_JS} for better architecture`,
-        'Managed user stories on JIRA, following scrum methodology'
+        `Migrated application from ${TechSkillsEnum.NODE_JS} to ${TechSkillsEnum.NEST_JS}, leading to faster development and improved architecture`
       ],
       skills: [
         TYPESCRIPT,
@@ -111,7 +107,10 @@ const data: ResumeDataDto = {
       location: 'Remote',
       from: '2022-11-29',
       to: '',
-      accomplishments: [``],
+      accomplishments: [
+        `Improved audio storage efficiency by leveraging Cloudflare R2 for hot access files and AWS S3 Glacier for original files, reducing storage costs and improving access times`,
+        `Collaborated with client to design and deploy a customized payments solution utilizing QuickBooks API, improving accounting accuracy and reducing processing time`
+      ],
       skills: [DOT_NET_CORE, C_SHARP, HTML, CSS, FIREBASE, MY_SQL]
     }
   ],
