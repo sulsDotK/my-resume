@@ -19,7 +19,10 @@ export enum TechSkillsEnum {
   POSTGRE_SQL = 'PostgreSQL',
   INFLUX_DB = 'InfluxDB',
   STRIPE = 'Stripe',
-  AZURE = 'Azure'
+  AZURE = 'Azure',
+  CLOUDFLARE_R2 = 'Cloudflare R2',
+  AWS_S3_GLACIER = 'AWS S3 Glacier',
+  QUICKBOOKS = 'QuickBooks'
 }
 
 export enum ContactTypeEnum {

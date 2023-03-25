@@ -46,7 +46,14 @@ const data: ResumeDataDto = {
       value: 'Lahore, Pakistan'
     }
   ],
-  skills: Object.values(TechSkillsEnum),
+  skills: Object.values(TechSkillsEnum).filter(
+    x =>
+      ![
+        TechSkillsEnum.AWS_S3_GLACIER,
+        TechSkillsEnum.CLOUDFLARE_R2,
+        TechSkillsEnum.QUICKBOOKS
+      ].includes(x)
+  ),
   experience: [
     {
       position: 'Software Engineer',
@@ -81,7 +88,7 @@ const data: ResumeDataDto = {
       from: '2021-12-01',
       to: '',
       accomplishments: [
-        `Implemented subscriptions and purchases system, using ${TechSkillsEnum.STRIPE} API for payments infrastructure, leading to faster development and increased revenue`,
+        `Successfully deployed a Stripe API-based subscription and purchase system, delivering an efficient and user-friendly payment infrastructure for customers`,
         `Implemented chat features from the ground up using ${TechSkillsEnum.FIREBASE} and ${TechSkillsEnum.REACT}, which eased communication and drove engagement`,
         'Identified and highlighted the impact of technical debt to management, leading to a long term road map to resolution',
         'Resolved performance bottleneck issues, improved app loading speed by 50%',

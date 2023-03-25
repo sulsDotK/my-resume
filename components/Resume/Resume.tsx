@@ -61,13 +61,12 @@ const Resume = () => {
               })}
             </div>
           </div>
-          <div className="flex-row">
+          {/* <div className="flex-row">
             <div className="flex flex-col gap-2">
               <div className="sub-heading">Interests</div>
               <div className="flex flex-col gap-1">
                 {resumeData.interests.map(interest => (
                   <div className="flex gap-2" key={interest}>
-                    {/* <div className="flex-col gap-4"></div> */}
                     <IconMapping
                       iconType={interest}
                       className="w-4 h-4 my-auto inline"
@@ -77,7 +76,7 @@ const Resume = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="flex flex-col basis-4/5 p-4">
           <div className="flex-row">
@@ -89,11 +88,11 @@ const Resume = () => {
             </span>
             <div className="mt-0 text-3xl">{resumeData.title}</div>
           </div>
-          <div className="flex-row mt-3">
+          <div className="flex-row mt-6">
             <div className="sub-heading">About</div>
             <div className="text-tiny">{resumeData.about}</div>
           </div>
-          <div className="flex-row mt-3">
+          <div className="flex-row mt-6">
             <div className="flex flex-col gap-2">
               <div className="sub-heading">Work Experience</div>
               <div className="flex flex-col gap-4">
