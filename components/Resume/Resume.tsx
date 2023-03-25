@@ -4,6 +4,8 @@ import { useResume } from '../../services/resume/resume.service'
 import Loader from '../misc/Loader/loader'
 import { IconMapping } from './IconMapping'
 import Image from 'next/image'
+import BoldKeywords from './Bold'
+import { TechSkillsEnum } from 'types'
 
 const Resume = () => {
   const { resumeData, isLoading, isError } = useResume()
@@ -15,35 +17,8 @@ const Resume = () => {
   ) : (
     <div className="root h-full">
       <div className="flex h-full">
-        <div className="flex flex-col gap-6 basis-1/3 p-4">
-          <div className="flex flex-row justify-center ">
-            <div className="w-48 h-48 relative">
-              <Image
-                src={resumeData.photoUrl}
-                alt="Picture"
-                layout="fill"
-                objectFit="cover"
-                className="rounded-full"
-              />
-            </div>
-          </div>
-          <div className="flex-row">
-            <div className="flex flex-col gap-1">
-              <div className="sub-heading">Contact</div>
-              <>
-                {resumeData.contactInfo.map(({ name, value }) => (
-                  <div className="flex flex-row gap-2" key={name}>
-                    <IconMapping
-                      iconType={name}
-                      className="w-4 h-4 inline my-auto"
-                    />
-                    <a className="text-tiny">{value}</a>
-                  </div>
-                ))}
-              </>
-            </div>
-          </div>
-          <div className="flex-row">
+        <div className="flex flex-col gap-6 basis-1/4 p-4">
+          <div className="flex-row mt-[140px]">
             <div className="flex flex-col gap-2">
               <div className="sub-heading">Skills</div>
               <div className="flex flex-wrap">
@@ -108,7 +83,7 @@ const Resume = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col basis-2/3 p-4">
+        <div className="flex flex-col basis-3/4 p-4">
           <div className="flex-row">
             <span className="mb-1 text-5xl font-bold">
               {resumeData.firstName + '   '}
@@ -150,7 +125,13 @@ const Resume = () => {
                               iconType="right-arrow"
                               className="ml-[-4px] mr-1 w-4 h-4 my-auto inline"
                             />
-                            <span className="text-tiny">{accomplishment}</span>
+                            <span className="text-tiny">
+                              <BoldKeywords
+                                str={accomplishment}
+                                keywords={Object.values(
+                                  TechSkillsEnum
+                                )}></BoldKeywords>
+                            </span>
                           </div>
                         ))}
                         <div className="flex flex-row mt-3 justify-start flex-wrap">

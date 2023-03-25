@@ -5,7 +5,7 @@ export enum TechSkillsEnum {
   NEST_JS = 'NestJS',
   NEXT_JS = 'NextJS',
   NODE_JS = 'NodeJS',
-  DOT_NET_CORE = '.NET Core',
+  DOT_NET_CORE = '.NET',
   HTML = 'HTML',
   CSS = 'CSS',
   TAILWIND_CSS = 'TailwindCSS',
@@ -17,7 +17,9 @@ export enum TechSkillsEnum {
   MONGO_DB = 'MongoDB',
   MY_SQL = 'MySQL',
   POSTGRE_SQL = 'PostgreSQL',
-  INFLUX_DB = 'InfluxDB'
+  INFLUX_DB = 'InfluxDB',
+  STRIPE = 'Stripe',
+  AZURE = 'Azure'
 }
 
 export enum ContactTypeEnum {

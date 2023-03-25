@@ -31,7 +31,7 @@ const data: ResumeDataDto = {
   title: 'Full Stack Engineer',
   photoUrl: '/private/profile-picture.jpeg',
   about:
-    'As a web developer with 3+ years of experience, I have a broad skill set in everything web development: Leading backend teams, building software from the ground up, high-traffic public websites, proof-of-concepts and catering to complex business requirements. I specialize myself in backend development, using Typescript, Nest.js, and Node.js.',
+    'As a web developer with 3.5+ years of experience, I have a broad skill set in everything web development including leading backend teams, building software from the ground up and catering to complex business requirements.',
   contactInfo: [
     {
       name: ContactTypeEnum.PHONE,
@@ -58,10 +58,9 @@ const data: ResumeDataDto = {
         "Developed dashboard for machines and KPI's monitoring, with data analysis using graphs, timeline and google maps",
         "Developed worker service to calculate different machine's KPI's",
         'Created separate windows services to centralize logging and email sending processes',
-        'Migrated services from REST API to Apache Kafka for inter-service communication',
+        `Migrated services from REST API to Apache ${TechSkillsEnum.KAFKA} for inter-service communication`,
         'Worked on ETL service to find and remove data anomalies, apply defined constraints, and generate missing data points',
-        'Designed worker service to maintain data consistency between Postgres DB (used by Web Application), and mySQL DB (used by CAS GenisisWorld CRM System)',
-        'Communicated directly with clients for requirements specifications'
+        `Designed worker service to maintain data consistency between ${TechSkillsEnum.POSTGRE_SQL} (used by Web Application), and ${TechSkillsEnum.MY_SQL} DB (used by CAS GenisisWorld CRM System)`
       ],
       skills: [
         DOT_NET_CORE,
@@ -79,19 +78,19 @@ const data: ResumeDataDto = {
     },
     {
       position: 'Full Stack Engineer',
-      company: 'Qureos (via Remotebase)',
+      company: 'Qureos',
       location: 'Remote',
       from: '2021-12-01',
       to: '',
       accomplishments: [
-        'Identified and highlighted the impact of technical debt to management',
-        'Resolved technical debt issues, whilst managing new features',
-        'Documented best practices for front and backend development',
-        'Migrated application from Node.js to Nest.js for better architecture',
-        "Built secure CRUD api's with consistent behavior",
-        'Implemented chat features from the ground up using Firebase and React',
-        'Evaluated performance and lead new developers',
-        'Balancing business requirements and delivery deadlines'
+        `Implemented subscriptions and purchases system, using ${TechSkillsEnum.STRIPE} API for payments infrastructure, leading to faster development and increased revenue`,
+        `Built secure CRUD api's, using ${TechSkillsEnum.NEST_JS} and ${TechSkillsEnum.MONGO_DB}`,
+        `Implemented chat features from the ground up using ${TechSkillsEnum.FIREBASE} and ${TechSkillsEnum.REACT}, which eased communication and drove engagement`,
+        'Identified and highlighted the impact of technical debt to management, leading to a long term road map to resolution',
+        'Resolved performance bottleneck issues, improved app loading speed by 50%',
+        'Documented and peer reviewed best practices for front and backend development, thus ensuring consistent coding standards',
+        `Migrated application from ${TechSkillsEnum.NODE_JS} to ${TechSkillsEnum.NEST_JS} for better architecture`,
+        'Managed user stories on JIRA, following scrum methodology'
       ],
       skills: [
         TYPESCRIPT,
@@ -105,6 +104,15 @@ const data: ResumeDataDto = {
         FIREBASE,
         MONGO_DB
       ]
+    },
+    {
+      position: 'Full Stack Engineer',
+      company: 'Integrate',
+      location: 'Remote',
+      from: '2022-11-29',
+      to: '',
+      accomplishments: [``],
+      skills: [DOT_NET_CORE, C_SHARP, HTML, CSS, FIREBASE, MY_SQL]
     }
   ],
   education: [
@@ -113,13 +121,6 @@ const data: ResumeDataDto = {
       degreeType: 'BS Computer Science',
       from: '2015-08-15',
       to: '2019-06-01',
-      location: 'Lahore'
-    },
-    {
-      institution: 'Punjab College',
-      degreeType: 'Intermediate (Pre-Engineering)',
-      from: '2013-09-01',
-      to: '2015-04-01',
       location: 'Lahore'
     }
   ],
