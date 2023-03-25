@@ -62,10 +62,9 @@ const data: ResumeDataDto = {
       from: '2019-06-17',
       to: '2021-11-26',
       accomplishments: [
-        "Developed dashboard for machines and KPI's monitoring, with data analysis using graphs, timeline and google maps",
+        'Worked on a complex application to capture, process, and display sensor data from multiple machines on a comprehensive dashboard, leveraging Redis cache, InfluxDB, and Elasticsearch to optimize data storage and enable real-time analysis and visualization',
         'Created separate windows services to centralize logging and email sending processes',
-        `Migrated services from REST API to Apache ${TechSkillsEnum.KAFKA} for inter-service communication`,
-        'Worked on ETL service to find and remove data anomalies, apply defined constraints, and generate missing data points'
+        `Migrated services from REST API to Apache ${TechSkillsEnum.KAFKA} for inter-service communication`
       ],
       skills: [
         DOT_NET_CORE,
