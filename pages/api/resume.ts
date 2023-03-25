@@ -86,7 +86,7 @@ const data: ResumeDataDto = {
       company: 'Qureos',
       location: 'Remote',
       from: '2021-12-01',
-      to: '',
+      to: '2022-10-22',
       accomplishments: [
         `Successfully deployed a Stripe API-based subscription and purchase system, delivering an efficient and user-friendly payment infrastructure for customers`,
         `Implemented chat features from the ground up using ${TechSkillsEnum.FIREBASE} and ${TechSkillsEnum.REACT}, which eased communication and drove engagement`,
