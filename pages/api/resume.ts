@@ -132,7 +132,7 @@ const data: ResumeDataDto = {
       to: '',
       accomplishments: [
         `Improved audio storage efficiency by leveraging Cloudflare R2 for hot access files and AWS S3 Glacier for original files, reducing storage costs and improving access times`,
-        `Collaborated with client to design and deploy a customized payments solution utilizing QuickBooks API, improving accounting accuracy and reducing processing time`
+        `Collaborated with client to design and deploy a customized payments solution in dotnet 6 utilizing QuickBooks API, improving accounting accuracy and reducing processing time`
       ],
       skills: [DOT_NET_CORE, C_SHARP, HTML, CSS, FIREBASE, MY_SQL]
     }
