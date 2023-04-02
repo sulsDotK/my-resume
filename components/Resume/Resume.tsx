@@ -19,17 +19,17 @@ const Resume = () => {
       <div className="flex h-full">
         <div className="flex flex-col gap-6 basis-1/5 pl-4 pt-6">
           <div className="flex flex-row justify-center ">
-            <div className="w-24 h-24 relative">
-              <Image
+            <div className="w-32 h-28 relative">
+              {/* <Image
                 src={resumeData.photoUrl}
                 alt="Picture"
                 layout="fill"
                 objectFit="cover"
                 className="rounded-full"
-              />
+              /> */}
             </div>
           </div>
-          <div className="flex-row mt-3">
+          <div className="flex-row">
             <div className="flex flex-col gap-1">
               <div className="sub-heading">Contact</div>
               <>
