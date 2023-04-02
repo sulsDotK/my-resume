@@ -29,7 +29,7 @@ const Resume = () => {
               />
             </div>
           </div>
-          <div className="flex-row">
+          <div className="flex-row mt-3">
             <div className="flex flex-col gap-1">
               <div className="sub-heading">Contact</div>
               <>

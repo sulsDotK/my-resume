@@ -48,7 +48,7 @@ const data: ResumeDataDto = {
   firstName: 'Suleman  ',
   lastName: 'Khalid',
   title: 'Senior Software Engineer',
-  photoUrl: '/private/profile-picture.jpeg',
+  photoUrl: '/private/profile-picture.jpg',
   about:
     'As a web developer with 3.5+ years of experience, I have a broad skill set in everything web development including leading backend teams, building software from the ground up and catering to complex business requirements.',
   contactInfo: [
