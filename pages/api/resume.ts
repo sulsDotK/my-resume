@@ -22,13 +22,32 @@ const {
   MONGO_DB,
   MY_SQL,
   POSTGRE_SQL,
-  INFLUX_DB
+  INFLUX_DB,
+  STRIPE,
+  AZURE,
+  CLOUDFLARE_R2,
+  AWS_S3_GLACIER,
+  QUICKBOOKS
 } = TechSkillsEnum
+
+const recentSkills = [
+  TYPESCRIPT,
+  NEST_JS,
+  NEXT_JS,
+  NODE_JS,
+  DOT_NET_CORE,
+  C_SHARP,
+  FIREBASE,
+  REDIS,
+  MY_SQL,
+  STRIPE,
+  AZURE
+]
 
 const data: ResumeDataDto = {
   firstName: 'Suleman  ',
   lastName: 'Khalid',
-  title: 'Full Stack Engineer',
+  title: 'Senior Software Engineer',
   photoUrl: '/private/profile-picture.jpeg',
   about:
     'As a web developer with 3.5+ years of experience, I have a broad skill set in everything web development including leading backend teams, building software from the ground up and catering to complex business requirements.',
@@ -48,12 +67,10 @@ const data: ResumeDataDto = {
   ],
   skills: Object.values(TechSkillsEnum).filter(
     x =>
-      ![
-        TechSkillsEnum.AWS_S3_GLACIER,
-        TechSkillsEnum.CLOUDFLARE_R2,
-        TechSkillsEnum.QUICKBOOKS
-      ].includes(x)
+      !recentSkills.includes(x) &&
+      ![CLOUDFLARE_R2, AWS_S3_GLACIER, QUICKBOOKS].includes(x)
   ),
+  recentSkills,
   experience: [
     {
       position: 'Software Engineer',
@@ -108,7 +125,7 @@ const data: ResumeDataDto = {
       ]
     },
     {
-      position: 'Full Stack Engineer',
+      position: 'Software Engineer',
       company: 'Integrate',
       location: 'Remote',
       from: '2022-11-29',

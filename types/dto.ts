@@ -7,6 +7,7 @@ export interface ResumeDataDto {
   title: string
   about: string
   contactInfo: ContactInfoDto[]
+  recentSkills: TechSkillsEnum[]
   skills: TechSkillsEnum[]
   experience: WorkExperienceDto[]
   education: EducationDto[]

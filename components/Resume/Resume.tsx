@@ -17,9 +17,48 @@ const Resume = () => {
   ) : (
     <div className="root h-full">
       <div className="flex h-full">
-        <div className="flex flex-col gap-6 basis-1/5 p-4">
-          <div className="flex flex-col gap-2 mt-[140px]">
-            <div className="sub-heading">Skills</div>
+        <div className="flex flex-col gap-6 basis-1/5 pl-4 pt-6">
+          <div className="flex flex-row justify-center ">
+            <div className="w-24 h-24 relative">
+              <Image
+                src={resumeData.photoUrl}
+                alt="Picture"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+          <div className="flex-row">
+            <div className="flex flex-col gap-1">
+              <div className="sub-heading">Contact</div>
+              <>
+                {resumeData.contactInfo.map(({ name, value }) => (
+                  <div className="flex flex-row gap-2" key={name}>
+                    <IconMapping
+                      iconType={name}
+                      className="w-4 h-4 inline my-auto"
+                    />
+                    <a className="text-tiny">{value}</a>
+                  </div>
+                ))}
+              </>
+            </div>
+          </div>
+          <div className="flex flex-col gap-2">
+            <div className="sub-heading">Recent Skills</div>
+            <div className="flex-col">
+              {resumeData.recentSkills.map(skill => (
+                <div className="flex basis-1/2 gap-2 mb-1" key={skill}>
+                  <IconMapping
+                    iconType={skill}
+                    className="w-4 h-4 my-auto inline"
+                  />
+                  <span className="text-tiny">{skill}</span>
+                </div>
+              ))}
+            </div>
+            <hr className="mt-1 line-hr" />
             <div className="flex-col">
               {resumeData.skills.map(skill => (
                 <div className="flex basis-1/2 gap-2 mb-1" key={skill}>
