@@ -50,7 +50,7 @@ const data: ResumeDataDto = {
   title: 'Senior Software Engineer',
   photoUrl: '/private/profile-picture.jpg',
   about:
-    'As a web developer with nearly 4 years of experience, I have a broad skill set in everything web development including leading backend teams, building software from the ground up and catering to complex business requirements.',
+    'As a software engineer with nearly 4 years of experience, I have a broad skill set in everything web development including leading backend teams, building software from the ground up and catering to complex business requirements.',
   contactInfo: [
     {
       name: ContactTypeEnum.PHONE,
