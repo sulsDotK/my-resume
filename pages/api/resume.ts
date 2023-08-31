@@ -11,8 +11,6 @@ const {
   NEXT_JS,
   NODE_JS,
   DOT_NET_CORE,
-  HTML,
-  CSS,
   TAILWIND_CSS,
   C_SHARP,
   DOCKER,
@@ -33,6 +31,8 @@ const {
 const recentSkills = [
   TYPESCRIPT,
   NEST_JS,
+  REACT,
+  TAILWIND_CSS,
   NEXT_JS,
   NODE_JS,
   DOT_NET_CORE,
@@ -47,10 +47,10 @@ const recentSkills = [
 const data: ResumeDataDto = {
   firstName: 'Suleman  ',
   lastName: 'Khalid',
-  title: 'Senior Software Engineer',
+  title: 'Full Stack Developer',
   photoUrl: '/private/profile-picture.jpg',
   about:
-    'As a software engineer with nearly 4 years of experience, I have a broad skill set in everything web development including leading backend teams, building software from the ground up and catering to complex business requirements.',
+    'As a software engineer with 4 years of experience (remote and on-site), I have a broad skill set in everything web development including leading engineering teams, building software from the ground up and catering to complex business requirements.',
   contactInfo: [
     {
       name: ContactTypeEnum.PHONE,
@@ -79,16 +79,13 @@ const data: ResumeDataDto = {
       from: '2019-06-17',
       to: '2021-11-26',
       accomplishments: [
-        'Worked on a complex application to capture, process, and display sensor data from multiple machines on a comprehensive dashboard, leveraging Redis cache, InfluxDB, and Elasticsearch to optimize data storage and enable real-time analysis and visualization',
-        'Created separate windows services to centralize logging and email sending processes',
+        'Worked on a complex application to process and display sensors data from multiple machines on a comprehensive dashboard, leveraging Redis cache, InfluxDB, and Elasticsearch to optimize data storage and enable real-time analysis and visualization',
         `Migrated services from REST API to Apache ${TechSkillsEnum.KAFKA} for inter-service communication`
       ],
       skills: [
         DOT_NET_CORE,
         ANGULAR,
         C_SHARP,
-        HTML,
-        CSS,
         DOCKER,
         KAFKA,
         REDIS,
@@ -114,8 +111,6 @@ const data: ResumeDataDto = {
       skills: [
         TYPESCRIPT,
         REACT,
-        HTML,
-        CSS,
         TAILWIND_CSS,
         NEST_JS,
         NEXT_JS,
@@ -131,10 +126,10 @@ const data: ResumeDataDto = {
       from: '2022-11-29',
       to: '',
       accomplishments: [
-        `Improved audio storage efficiency by leveraging Cloudflare R2 for hot access files and AWS S3 Glacier for original files, reducing storage costs and improving access times`,
-        `Collaborated with client to design and deploy a customized payments solution in dotnet 6 utilizing QuickBooks API, improving accounting accuracy and reducing processing time`
+        `Took charge of full-stack responsibilities. Played a pivotal role by leading feature development initiatives, integrating multi-user support with role-based authentication, and implementing scalable chat functionality.`,
+        `The result was a notable boost in user engagement and daily active logins, as users embraced the portal for streamlined communication, thus reducing reliance on email correspondence.`
       ],
-      skills: [DOT_NET_CORE, C_SHARP, HTML, CSS, FIREBASE, MY_SQL]
+      skills: [DOT_NET_CORE, C_SHARP, FIREBASE, MY_SQL]
     }
   ],
   education: [
